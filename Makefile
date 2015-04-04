@@ -18,6 +18,7 @@ CFLAGS = -std=c99 -g -lm -Wall
 # $ make
 out: $(SOURCES) $(HSOURCES)
 	gcc $(CFLAGS) $(SOURCES) -o out
+	# To execute the program, run: ./out
 
 # $ make clean
 # Removes created files
