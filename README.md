@@ -1,4 +1,4 @@
 # sorts
-C implementations of sorts (selection, insertion, quick, merge).
+C implementations of various sorts (selection, insertion, quick, merge) on arrays of integers.
 
-Insertion sort and merge sort are almost finished; I have yet to add them.
+Insertion sort is almost finished; I have yet to add and test it.
