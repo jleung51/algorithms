@@ -3,7 +3,7 @@
  * Name: Jeffrey Leung
  * Date: 2015-04-07
  *
- * This program contains the implementation of a recursive mergesort algorithm.
+ * This program contains the implementation of a recursive merge sort algorithm.
  *
  */
 
@@ -69,7 +69,7 @@ static void merge_arrays( int* array1, int len1, int* array2, int len2 )
   return;
 }
 
-// This function recursively sorts an array from least to greatest using the mergesort algorithm.
+// This function recursively sorts an array from least to greatest using the merge sort algorithm.
 void merge_sort( int* array, int len )
 {
   if( len <= 1 )
@@ -85,4 +85,4 @@ void merge_sort( int* array, int len )
   merge_arrays( array, mid, array+mid, len-mid );
 
   return;
-}
+} 
