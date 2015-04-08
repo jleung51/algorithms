@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-03-21
+ * Date: 2015-04-07
  *
  * This program contains the implementation of a recursive selection sort algorithm.
  *
@@ -11,11 +11,15 @@
 
 #include "selection_sort.h"
 
+// Only for use by selection_sort().
+// This function swaps the values of two integers, given their pointers.
+static void swap_ssort( int* a, int* b );
+
 
 
 // Only for use by selection_sort().
 // This function swaps the values of two integers, given their pointers.
-void swap_ssort( int* a, int* b )
+static void swap_ssort( int* a, int* b )
 {
   int temp = *a;
   *a = *b;
