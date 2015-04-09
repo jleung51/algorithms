@@ -17,6 +17,7 @@
 
 #include "test.h"
 #include "selection_sort/selection_sort.h"
+#include "insertion_sort/insertion_sort.h"
 #include "quick_sort/quick_sort.h"
 #include "merge_sort/merge_sort.h"
 
@@ -64,7 +65,7 @@ int main()
   }
   else if( c == 'i' )
   {
-    // Insertion sort
+    insertion_sort( array, len );
   }
   else if( c == 'q' )
   {
