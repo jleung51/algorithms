@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-08
+ * Date: 2015-04-15
  *
  * This program contains the implementation of a recursive insertion sort algorithm.
  *
@@ -15,6 +15,13 @@
 // This function recursively sorts an integer array using the insertion sort algorithm.
 void insertion_sort( int* array, int len )
 {
+  if( array == NULL )
+  {
+    printf( "Error: insertion_sort was given a null pointer.\n" );
+    exit( 1 );
+  }
+
+
   int unsorted;
   for( unsorted = 1; array[unsorted-1] <= array[unsorted]; unsorted++ )
   {
