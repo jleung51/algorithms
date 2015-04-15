@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-07
+ * Date: 2015-04-15
  *
  * This program contains the implementation of a recursive selection sort algorithm.
  *
@@ -32,6 +32,12 @@ static void swap_ssort( int* a, int* b )
 // selection sort algorithm.
 void selection_sort( int* array, int len )
 {
+  if( array == NULL )
+  {
+    printf( "Error: selection_sort was given a null pointer.\n" );
+    exit( 1 );
+  }
+
   if( len < 2 )
   {
     return;

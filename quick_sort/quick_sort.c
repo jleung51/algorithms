@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-07
+ * Date: 2015-04-15
  *
  * This program contains the implementation of a recursive quicksort algorithm.
  *
@@ -31,6 +31,12 @@ static void swap_qsort( int* a, int* b )
 // This function recursively sorts an array from least to greatest using the quicksort algorithm.
 void quick_sort( int* array, int len )
 {
+  if( array == NULL )
+  {
+    printf( "Error: quick_sort was given a null pointer.\n" );
+    exit( 1 );
+  }
+
   if( len < 2 )
   {
     return;
