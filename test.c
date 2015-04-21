@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-03-20
+ * Date: 2015-04-21
  *
  * This program tests the various sorting algorithms:
  *   Selection sort,
