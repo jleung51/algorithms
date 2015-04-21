@@ -38,15 +38,13 @@ int main()
   char in;
   printf( "Enter 'l' to test the linear search.\n" );
   printf( "Enter 'b' to test the binary search.\n" );
-  scanf( "%c", &in );
+  in = getchar();
+  printf( "\n" );
 
   while( in != 'l' && in != 'b' )
   {
-    printf( "\n" );
     printf( "That is not a valid input.\n" );
-    printf( "Enter 'l' to test the linear search.\n" );
-    printf( "Enter 'b' to test the binary search.\n" );
-    scanf( "%c", &in );
+    return 1;
   }
 
   int find1 = 76;
@@ -70,7 +68,6 @@ int main()
     found3 = binary_search( array, len, find3 );
   */}
 
-  printf( "\n" );
   printf( "In the array " );
   print_array( array, len );
   printf( ":\n" );
