@@ -17,6 +17,7 @@
 
 #include "test.h"
 #include "selection_sort/selection_sort.h"
+#include "insertion_sort/insertion_sort.h"
 #include "quick_sort/quick_sort.h"
 #include "merge_sort/merge_sort.h"
 
@@ -64,7 +65,7 @@ int main()
   }
   else if( c == 'i' )
   {
-    // Insertion sort
+    insertion_sort( array, len );
   }
   else if( c == 'q' )
   {
@@ -75,7 +76,7 @@ int main()
     merge_sort( array, len );
   }
 
-  printf( "The sorted array and the sort result are:\n" );
+  printf( "The sorted array and the sort result, respectively, are:\n" );
   printf( "{ 0 2 3 3 5 6 8 8 }\n" );
   print_array( array, len );
   printf( "\n" );
