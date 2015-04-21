@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-15
+ * Date: 2015-04-21
  *
  * This program contains the implementation of a recursive insertion sort algorithm.
  *
@@ -9,6 +9,7 @@
 
 #include <assert.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "insertion_sort.h"
 
@@ -21,14 +22,15 @@ void insertion_sort( int* array, int len )
     exit( 1 );
   }
 
-
-  int unsorted;
-  for( unsorted = 1; array[unsorted-1] <= array[unsorted]; unsorted++ )
+  int unsorted = 1;
+  while( unsorted < len && array[unsorted-1] <= array[unsorted] )
   {
-    if( unsorted >= len )  // List already sorted
-    {
-      return;
-    }
+    unsorted++;
+  }
+
+  if( unsorted == len )  // List already sorted
+  {
+    return;
   }
 
   int temp = array[unsorted];

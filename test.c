@@ -76,7 +76,7 @@ int main()
     merge_sort( array, len );
   }
 
-  printf( "The sorted array and the sort result are:\n" );
+  printf( "The sorted array and the sort result, respectively, are:\n" );
   printf( "{ 0 2 3 3 5 6 8 8 }\n" );
   print_array( array, len );
   printf( "\n" );
