@@ -1,13 +1,15 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-15
+ * Date: 2015-04-21
  *
  * This program contains the implementation of a recursive selection sort algorithm.
  *
  */
 
+#include <assert.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "selection_sort.h"
 
