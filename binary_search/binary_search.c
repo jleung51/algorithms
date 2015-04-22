@@ -17,8 +17,6 @@
 int binary_search( int* array, int len, const int TARGET )
 {
   int mid = len/2;
-assert( (array+mid)[0] == array[mid] );
-printf( "Checking %d\n", mid );
   int location;
 
   if( array[mid] == TARGET )
@@ -38,6 +36,6 @@ printf( "Checking %d\n", mid );
     location = binary_search( array+mid+1, len-mid-1, TARGET );
     location = ( location == -1 ) ? -1 : location+mid+1;
   }
-printf( "Returning location %d\n", location );
+
   return location;
 }
