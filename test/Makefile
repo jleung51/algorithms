@@ -1,8 +1,12 @@
 # Source files
-SOURCES  = ../linear_search/linear_search.c test.c
+SOURCES  = ../linear_search/linear_search.c \
+           ../binary_search/binary_search.c \
+           test.c
 
 # Header files
-HSOURCES = ../linear_search/linear_search.h test.h
+HSOURCES = ../linear_search/linear_search.h \
+           ../binary_search/binary_search.h \
+           test.h
 
 # Compiler options
 CFLAGS = -std=c99 -g -lm -Wall
