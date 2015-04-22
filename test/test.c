@@ -14,6 +14,7 @@
 
 #include "test.h"
 #include "../linear_search/linear_search.h"
+#include "../binary_search/binary_search.h"
 
 // This function prints the contents of an array.
 void print_array( int* array, int len )
@@ -33,7 +34,7 @@ void print_array( int* array, int len )
 int main()
 {
   int len = 6;
-  int array[6] = { 3, 54, 76, 9, 1, 45 };
+  int array[6] = { 1, 3, 9, 45, 54, 76 };
 
   char in;
   printf( "Enter 'l' to test the linear search.\n" );
@@ -62,11 +63,11 @@ int main()
     found3 = linear_search( array, len, find3 );
   }
   else if( in == 'b' )
-  {/*
+  {
     found1 = binary_search( array, len, find1 );
     found2 = binary_search( array, len, find2 );
     found3 = binary_search( array, len, find3 );
-  */}
+  }
 
   printf( "In the array " );
   print_array( array, len );
