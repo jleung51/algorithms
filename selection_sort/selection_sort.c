@@ -41,10 +41,10 @@ void selection_sort( int* array, unsigned int len )
   }
 
   int i, j;
-  for( i = 0; i < len; i++ )
+  for( i = 0; i < len; ++i )
   {
     int min = i;
-    for( j = i; j < len; j++ )
+    for( j = i; j < len; ++j )
     {
       if( array[j] < array[min] )
       {

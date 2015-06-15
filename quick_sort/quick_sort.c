@@ -54,12 +54,12 @@ void quick_sort( int* array, unsigned int len )
   //   than array[0].
   //   All elements between indices sweep and len-1 (inclusive) are unknown.
   int sweep;
-  for( sweep = 1; sweep < len; sweep++ )
+  for( sweep = 1; sweep < len; ++sweep )
   {
     if( array[sweep] < array[0] )
     {
       swap_quick_sort( array + (mid+1), array + (sweep) );
-      mid++;
+      ++mid;
     }
   }
 

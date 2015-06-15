@@ -26,7 +26,7 @@ void print_array( int* array, unsigned int len )
 {
   printf( "{ " );
   int i;
-  for( i = 0; i < len; i++ )
+  for( i = 0; i < len; ++i )
   {
     printf( "%d ", array[i] );
   }

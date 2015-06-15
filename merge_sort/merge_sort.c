@@ -52,7 +52,7 @@ static void merge_arrays( int* array1, unsigned int len1,
       len2--;
     }
 
-    i++;
+    ++i;
   }
 
   // Leftover elements
@@ -62,6 +62,7 @@ static void merge_arrays( int* array1, unsigned int len1,
     array_copy[i + j] = array1[j];
   }
   for( j = 0; j < len2; ++j )
+
   {
     array_copy[i + j] = array2[j];
   }
