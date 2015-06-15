@@ -6,6 +6,7 @@
  * This C program contains a function to assist testing of the various
  * sorting algorithms:
  *   bogosort,
+ *   bubble sort,
  *   insertion sort,
  *   merge sort,
  *   quick sort,
