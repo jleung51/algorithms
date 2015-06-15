@@ -14,6 +14,6 @@
 
 // This function recursively sorts an array from least to greatest using the
 // insertion sort algorithm.
-void insertion_sort( int* array, int len );
+void insertion_sort( int* array, unsigned int len );
 
 #endif

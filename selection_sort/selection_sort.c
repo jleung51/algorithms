@@ -32,7 +32,7 @@ static void swap_selection_sort( int* a, int* b )
 
 // This function sorts an array from least to greatest using the
 // selection sort algorithm.
-void selection_sort( int* array, int len )
+void selection_sort( int* array, unsigned int len )
 {
   if( array == NULL )
   {

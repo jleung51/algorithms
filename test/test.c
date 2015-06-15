@@ -22,7 +22,7 @@
 #include "../merge_sort/merge_sort.h"
 
 // This function prints an integer array.
-void print_array( int* array, int len )
+void print_array( int* array, unsigned int len )
 {
   printf( "{ " );
   int i;

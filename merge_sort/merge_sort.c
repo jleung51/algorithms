@@ -19,7 +19,8 @@
 // memory spaces of the original arrays) with elements from least to greatest.
 // array1 and array2 must be in consecutive memory spaces - i.e. two sections
 // of the same array.
-static void merge_arrays( int* array1, int len1, int* array2, int len2 );
+static void merge_arrays( int* array1, unsigned int len1,
+                          int* array2, unsigned int len2 );
 
 
 
@@ -28,7 +29,8 @@ static void merge_arrays( int* array1, int len1, int* array2, int len2 );
 // memory spaces of the original arrays) with elements from least to greatest.
 // array1 and array2 must be in consecutive memory spaces - i.e. two sections
 // of the same array.
-static void merge_arrays( int* array1, int len1, int* array2, int len2 )
+static void merge_arrays( int* array1, unsigned int len1,
+                          int* array2, unsigned int len2 )
 {
   int* array_final = array1;
   int len_final = len1 + len2;
@@ -74,7 +76,7 @@ static void merge_arrays( int* array1, int len1, int* array2, int len2 )
 
 // This function recursively sorts an array from least to greatest using the
 // merge sort algorithm.
-void merge_sort( int* array, int len )
+void merge_sort( int* array, unsigned int len )
 {
   if( array == NULL )
   {

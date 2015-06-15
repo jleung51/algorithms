@@ -13,6 +13,6 @@
 
 // This function recursively sorts an array from least to greatest using the
 // selection sort algorithm.
-void selection_sort( int* array, int len );
+void selection_sort( int* array, unsigned int len );
 
 #endif

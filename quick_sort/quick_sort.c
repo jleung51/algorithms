@@ -32,7 +32,7 @@ static void swap_quick_sort( int* a, int* b )
 
 // This function recursively sorts an array from least to greatest using the
 // quicksort algorithm.
-void quick_sort( int* array, int len )
+void quick_sort( int* array, unsigned int len )
 {
   if( array == NULL )
   {

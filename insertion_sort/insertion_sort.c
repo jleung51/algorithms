@@ -14,7 +14,7 @@
 #include "insertion_sort.h"
 
 // This function sorts an integer array using the insertion sort algorithm.
-void insertion_sort( int* array, int len )
+void insertion_sort( int* array, unsigned int len )
 {
   if( array == NULL )
   {
