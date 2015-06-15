@@ -5,10 +5,11 @@
  *
  * This header file contains a function to assist testing of the various
  * sorting algorithms:
- *   Selection sort,
- *   Insertion sort,
- *   Quick sort, and
- *   Merge sort.
+ *   insertion sort,
+ *   merge sort,
+ *   quick sort,
+ *   selection sort, and
+ *   shell sort.
  *
  */
 

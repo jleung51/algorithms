@@ -4,11 +4,11 @@
  * Date: 2015-06-14
  *
  * This program tests the various sorting algorithms:
- *   Selection sort,
- *   Insertion sort,
- *   Shell sort,
- *   Quick sort, and
- *   Merge sort.
+ *   insertion sort,
+ *   merge sort,
+ *   quick sort,
+ *   selection sort, and
+ *   shell sort.
  *
  */
 
@@ -17,11 +17,11 @@
 #include <stdio.h>
 
 #include "test.h"
-#include "../selection_sort/selection_sort.h"
 #include "../insertion_sort/insertion_sort.h"
-#include "../shell_sort/shell_sort.h"
-#include "../quick_sort/quick_sort.h"
 #include "../merge_sort/merge_sort.h"
+#include "../quick_sort/quick_sort.h"
+#include "../selection_sort/selection_sort.h"
+#include "../shell_sort/shell_sort.h"
 
 // This function prints an integer array.
 void print_array( int* array, unsigned int len )
@@ -41,51 +41,43 @@ int main()
 {
   int len = 8;
   int array[] = { 0, 5, 8, 3, 2, 6, 3, 8 };
+  int array_original[] = {0, 5, 8, 3, 2, 6, 3, 8 };
 
-  printf( "Enter 's' to test the selection sort.\n" );
-  printf( "Enter 'i' to test the insertion sort.\n" );
+  printf( "Enter '1' to test the insertion sort.\n" );
+  printf( "Enter '2' to test the merge sort.\n" );
+  printf( "Enter '3' to test the quick sort.\n" );
+  printf( "Enter '4' to test the selection sort.\n" );
   printf( "Enter '5' to test the shell sort.\n" );
-  printf( "Enter 'q' to test the quick sort.\n" );
-  printf( "Enter 'm' to test the merge sort.\n" );
 
   char c = getchar();
-  c = tolower( c );
   printf( "\n" );
 
-  if( c != 's' &&
-      c != 'i' &&
-      c != '5' &&
-      c != 'q' &&
-      c != 'm' )
+  int num = c - '0';
+  switch( num )
   {
+    case 1:
+      insertion_sort( array, len );
+      break;
+    case 2:
+      merge_sort( array, len );
+      break;
+    case 3:
+      quick_sort( array, len );
+      break;
+    case 4:
+      selection_sort( array, len );
+      break;
+    case 5:
+      shell_sort( array, len );
+      break;
+    default:
     printf( "That was not a valid input.\n" );
     return 1;
   }
 
   printf( "Before sorting, the array is:\n" );
-  print_array( array, len );
+  print_array( array_original, len );
   printf( "\n" );
-
-  if( c == 's' )
-  {
-    selection_sort( array, len );
-  }
-  else if( c == 'i' )
-  {
-    insertion_sort( array, len );
-  }
-  else if( c == '5' )
-  {
-    shell_sort( array, len );
-  }
-  else if( c == 'q' )
-  {
-    quick_sort( array, len );
-  }
-  else if( c == 'm' )
-  {
-    merge_sort( array, len );
-  }
 
   printf( "The sorted array and the sort result, respectively, are:\n" );
   printf( "{ 0 2 3 3 5 6 8 8 }\n" );
