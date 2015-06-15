@@ -3,7 +3,8 @@
  * Name: Jeffrey Leung
  * Date: 2015-06-14
  *
- * This program tests the various sorting algorithms:
+ * This C program tests the various sorting algorithms:
+ *   bogosort,
  *   insertion sort,
  *   merge sort,
  *   quick sort,
@@ -17,6 +18,7 @@
 #include <stdio.h>
 
 #include "test.h"
+#include "../bogosort/bogosort.h"
 #include "../insertion_sort/insertion_sort.h"
 #include "../merge_sort/merge_sort.h"
 #include "../quick_sort/quick_sort.h"
@@ -43,11 +45,13 @@ int main()
   int array[] = { 0, 5, 8, 3, 2, 6, 3, 8 };
   int array_original[] = {0, 5, 8, 3, 2, 6, 3, 8 };
 
-  printf( "Enter '1' to test the insertion sort.\n" );
-  printf( "Enter '2' to test the merge sort.\n" );
-  printf( "Enter '3' to test the quick sort.\n" );
-  printf( "Enter '4' to test the selection sort.\n" );
-  printf( "Enter '5' to test the shell sort.\n" );
+  int count = 1;
+  printf( "Enter '%d' to test the bogosort.\n", count++ );
+  printf( "Enter '%d' to test the insertion sort.\n", count++ );
+  printf( "Enter '%d' to test the merge sort.\n", count++ );
+  printf( "Enter '%d' to test the quick sort.\n", count++ );
+  printf( "Enter '%d' to test the selection sort.\n", count++ );
+  printf( "Enter '%d' to test the shell sort.\n", count++ );
 
   char c = getchar();
   printf( "\n" );
@@ -56,18 +60,21 @@ int main()
   switch( num )
   {
     case 1:
-      insertion_sort( array, len );
+      bogosort( array, len );
       break;
     case 2:
-      merge_sort( array, len );
+      insertion_sort( array, len );
       break;
     case 3:
-      quick_sort( array, len );
+      merge_sort( array, len );
       break;
     case 4:
-      selection_sort( array, len );
+      quick_sort( array, len );
       break;
     case 5:
+      selection_sort( array, len );
+      break;
+    case 6:
       shell_sort( array, len );
       break;
     default:

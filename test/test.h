@@ -3,8 +3,9 @@
  * Name: Jeffrey Leung
  * Date: 2015-04-21
  *
- * This header file contains a function to assist testing of the various
+ * This C program contains a function to assist testing of the various
  * sorting algorithms:
+ *   bogosort,
  *   insertion sort,
  *   merge sort,
  *   quick sort,

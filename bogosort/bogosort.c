@@ -18,6 +18,10 @@
 static void randomize_array_bogosort( int* array, unsigned int len );
 
 // Only for use by bogosort().
+// This function returns 1 if an array is sorted, and 0 otherwise.
+static int is_sorted_bogosort( int* array, unsigned int len );
+
+// Only for use by bogosort().
 // This function randomizes the contents of an array.
 static void randomize_array_bogosort( int* array, unsigned int len )
 {
@@ -38,7 +42,7 @@ static void randomize_array_bogosort( int* array, unsigned int len )
     remove = rand() % len_temp;
     array_random[i] = array[remove];
 
-    array[remove] = array[len_temp];
+    array[remove] = array[len_temp-1];
     --len_temp;
   }
 
@@ -46,6 +50,42 @@ static void randomize_array_bogosort( int* array, unsigned int len )
   for( j = 0; j < len; ++j )
   {
     array[j] = array_random[j];
+  }
+
+  return;
+}
+
+// Only for use by bogosort().
+// This function returns 1 if an array is sorted, and 0 otherwise.
+static int is_sorted_bogosort( int* array, unsigned int len )
+{
+  int i;
+  for( i = 0; i < len-1; ++i )
+  {
+    if( array[i] > array[i+1] )
+    {
+      return 0;
+    }
+  }
+
+  return 1;
+}
+
+
+
+// This function sorts an array from least to greatest using the
+// bogosort algorithm.
+void bogosort( int* array, unsigned int len )
+{
+  if( array == NULL )
+  {
+    printf( "Error: bogosort() was given a null pointer.\n" );
+    exit( 1 );
+  }
+
+  while( !is_sorted_bogosort( array, len ) )
+  {
+    randomize_array_bogosort( array, len );
   }
 
   return;
