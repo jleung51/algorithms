@@ -1,13 +1,13 @@
 /*
  *
- * Name: Jeffrey Leung
- * Date: 2015-04-21
+ * Author: Jeffrey Leung
+ * Last edited: 2015-06-14
  *
- * This program contains the implementation of a recursive quicksort algorithm.
+ * This C program contains the implementation of a recursive quicksort
+ * algorithm on an array of integers.
  *
  */
 
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
 

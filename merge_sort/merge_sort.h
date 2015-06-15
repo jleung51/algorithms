@@ -1,9 +1,10 @@
 /*
  *
- * Name: Jeffrey Leung
- * Date: 2015-04-15
+ * Author: Jeffrey Leung
+ * Last edited: 2015-04-15
  *
- * This program contains the implementation of a recursive merge sort algorithm.
+ * This C program contains the implementation of a recursive merge sort
+ * algorithm on an array of integers.
  *
  */
 
