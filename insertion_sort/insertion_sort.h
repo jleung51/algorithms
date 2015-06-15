@@ -1,3 +1,14 @@
+/*
+ *
+ * Name: Jeffrey Leung
+ * Date: 2015-06-14
+ *
+ * This program contains the implementation of an insertion sort algorithm
+ * on an array of integers.
+ *
+ */
+
+
 #ifndef INSERTION_SORT_H
 #define INSERTION_SORT_H
 

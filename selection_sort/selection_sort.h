@@ -1,3 +1,13 @@
+/*
+ *
+ * Name: Jeffrey Leung
+ * Date: 2015-06-14
+ *
+ * This program contains the implementation of a selection sort algorithm on
+ * an array of integers.
+ *
+ */
+
 #ifndef SELECTION_SORT_H
 #define SELECTION_SORT_H
 

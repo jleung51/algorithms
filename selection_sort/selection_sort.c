@@ -1,9 +1,10 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-21
+ * Date: 2015-06-14
  *
- * This program contains the implementation of a recursive selection sort algorithm.
+ * This program contains the implementation of a selection sort algorithm on
+ * an array of integers.
  *
  */
 
@@ -15,13 +16,13 @@
 
 // Only for use by selection_sort().
 // This function swaps the values of two integers, given their pointers.
-static void swap_ssort( int* a, int* b );
+static void swap_selection_sort( int* a, int* b );
 
 
 
 // Only for use by selection_sort().
 // This function swaps the values of two integers, given their pointers.
-static void swap_ssort( int* a, int* b )
+static void swap_selection_sort( int* a, int* b )
 {
   int temp = *a;
   *a = *b;
@@ -30,35 +31,30 @@ static void swap_ssort( int* a, int* b )
   return;
 }
 
-// This function recursively sorts an array from least to greatest using the
+// This function sorts an array from least to greatest using the
 // selection sort algorithm.
 void selection_sort( int* array, int len )
 {
   if( array == NULL )
   {
-    printf( "Error: selection_sort was given a null pointer.\n" );
+    printf( "Error: selection_sort() was given a null pointer.\n" );
     exit( 1 );
   }
 
-  if( len < 2 )
-  {
-    return;
-  }
-
-  int min = 0;
-
-  int i;
+  int i, j;
   for( i = 0; i < len; i++ )
   {
-    if( array[i] < array[min] )
+    int min = i;
+    for( j = i; j < len; j++ )
     {
-      min = i;
+      if( array[j] < array[min] )
+      {
+        min = j;
+      }
     }
+
+    swap_selection_sort( array+i, array+min );
   }
-
-  swap_ssort( array, array+min );
-
-  selection_sort( array+1, len-1 );
 
   return;
 }

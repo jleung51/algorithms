@@ -1,9 +1,10 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-21
+ * Date: 2015-06-14
  *
- * This program contains the implementation of a recursive insertion sort algorithm.
+ * This program contains the implementation of an insertion sort algorithm
+ * on an array of integers.
  *
  */
 
