@@ -1,11 +1,12 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-21
+ * Date: 2015-06-14
  *
  * This program tests the various sorting algorithms:
  *   Selection sort,
  *   Insertion sort,
+ *   Shell sort,
  *   Quick sort, and
  *   Merge sort.
  *
@@ -18,6 +19,7 @@
 #include "test.h"
 #include "../selection_sort/selection_sort.h"
 #include "../insertion_sort/insertion_sort.h"
+#include "../shell_sort/shell_sort.h"
 #include "../quick_sort/quick_sort.h"
 #include "../merge_sort/merge_sort.h"
 
@@ -42,6 +44,7 @@ int main()
 
   printf( "Enter 's' to test the selection sort.\n" );
   printf( "Enter 'i' to test the insertion sort.\n" );
+  printf( "Enter '5' to test the shell sort.\n" );
   printf( "Enter 'q' to test the quick sort.\n" );
   printf( "Enter 'm' to test the merge sort.\n" );
 
@@ -49,7 +52,11 @@ int main()
   c = tolower( c );
   printf( "\n" );
 
-  if( c != 's' && c != 'i' && c != 'q' && c != 'm' )
+  if( c != 's' &&
+      c != 'i' &&
+      c != '5' &&
+      c != 'q' &&
+      c != 'm' )
   {
     printf( "That was not a valid input.\n" );
     return 1;
@@ -66,6 +73,10 @@ int main()
   else if( c == 'i' )
   {
     insertion_sort( array, len );
+  }
+  else if( c == '5' )
+  {
+    shell_sort( array, len );
   }
   else if( c == 'q' )
   {
