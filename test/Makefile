@@ -13,7 +13,7 @@ HSOURCES  = ../selection_sort/selection_sort.h \
             test.h
 
 # Compiler options
-CFLAGS = -std=c99 -g -lm -Wall
+CFLAGS = -std=c11 -g -lm -Wall
 
 #####
 ###
