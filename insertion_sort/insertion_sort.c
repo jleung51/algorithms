@@ -13,35 +13,27 @@
 
 #include "insertion_sort.h"
 
-// This function recursively sorts an integer array using the insertion sort algorithm.
+// This function sorts an integer array using the insertion sort algorithm.
 void insertion_sort( int* array, int len )
 {
   if( array == NULL )
   {
-    printf( "Error: insertion_sort was given a null pointer.\n" );
+    printf( "Error: insertion_sort() was given a null pointer.\n" );
     exit( 1 );
   }
 
-  int unsorted = 1;
-  while( unsorted < len && array[unsorted-1] <= array[unsorted] )
+  int i;
+  for( i = 0; i < len; ++i )
   {
-    unsorted++;
+    int index = i;
+    int temp = array[index];
+    while( 0 < index && array[index-1] > temp )
+    {
+      array[index] = array[index-1];
+      index--;
+    }
+    array[index] = temp;
   }
-
-  if( unsorted == len )  // List already sorted
-  {
-    return;
-  }
-
-  int temp = array[unsorted];
-  while( 0 < unsorted && array[unsorted-1] > temp )
-  {
-   array[unsorted] = array[unsorted-1];
-    unsorted--;
-  }
-  array[unsorted] = temp;
-
-  insertion_sort( array, len );
 
   return;
 }
