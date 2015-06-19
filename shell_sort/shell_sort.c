@@ -55,7 +55,7 @@ static void gap_insertion_sort( int* array, unsigned int len,
   {
     int j = i;
     int temp = array[i];
-    while( j > 0+gap && array[j-gap] > temp )  // '0+gap' used for readability.
+    while( j >= 0+gap && array[j-gap] > temp )  // '0+gap' used for readability.
     {
       array[j] = array[j-gap];
       j -= gap;
