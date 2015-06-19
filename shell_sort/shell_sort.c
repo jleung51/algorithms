@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-06-14
+ * Date: 2015-06-18
  *
  * This C program contains the implementation of a shell sort algorithm.
  *
@@ -28,7 +28,7 @@ static void gap_insertion_sort( int* array, unsigned int len,
 // array + start + gap * 2,
 // etc.
 static void gap_insertion_sort( int* array, unsigned int len,
-                                unsigned int gap, unsigned int start )
+                                unsigned int gap )
 {
   if( array == NULL )
   {
@@ -51,7 +51,7 @@ static void gap_insertion_sort( int* array, unsigned int len,
   }
 
   int i;
-  for( i = start + gap; i < len; i += gap )
+  for( i = 0+gap; i < len; ++i )  // '0+gap' used for readability.
   {
     int j = i;
     int temp = array[i];
@@ -81,11 +81,7 @@ void shell_sort( int* array, unsigned int len )
   int gap = len / 2;
   while( gap > 0 )
   {
-    int i;
-    for( i = 0; i < gap; ++i )
-    {
-      gap_insertion_sort( array, len, gap, i );
-    }
+    gap_insertion_sort( array, len, gap );
     gap /= 2;
   }
 
