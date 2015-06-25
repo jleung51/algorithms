@@ -76,12 +76,6 @@ static void swap_quick_sort( int* a, int* b )
 // quicksort algorithm.
 static void quick_sort_helper( int* array, unsigned int len )
 {
-  if( array == NULL )
-  {
-    printf( "Error: quick_sort() was given a null pointer.\n" );
-    exit( 1 );
-  }
-
   if( len < 2 )
   {
     return;
@@ -117,6 +111,16 @@ static void quick_sort_helper( int* array, unsigned int len )
 // quicksort algorithm, after randomizing the array to prevent the worst case.
 void quick_sort( int* array, unsigned int len )
 {
+  if( array == NULL )
+  {
+    printf( "Error: quick_sort() was given a null pointer.\n" );
+    exit( 1 );
+  }
+  if( len < 2 )
+  {
+    return;
+  }
+
   randomize_array_quick_sort( array, len );
   quick_sort_helper( array, len );
   return;
