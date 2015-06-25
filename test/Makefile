@@ -20,7 +20,7 @@ HSOURCES = ../bogosort/bogosort.h \
 
 
 # Compiler options
-CFLAGS = -std=c11 -g -lm -Wall
+CFLAGS = -std=c11 -g -Wall
 
 #####
 ###
@@ -33,12 +33,12 @@ CFLAGS = -std=c11 -g -lm -Wall
 # $ 'make' or 'make help'
 help:
 	# INSTRUCTIONS:
-	#   To test int_array.h, run: make output
+	#   To test the sorts, run: make output
 	#   To remove compiled output files, run: make clean
 
 # $ make
 output: $(SOURCES) $(HSOURCES)
-	gcc $(CFLAGS) $(SOURCES) -o output
+	gcc $(CFLAGS) $(SOURCES) -o output -lm
 	# To execute the program, run: ./output
 
 # $ make clean
