@@ -30,12 +30,18 @@ CFLAGS = -std=c11 -g -lm -Wall
 ###
 #####
 
+# $ 'make' or 'make help'
+help:
+	# INSTRUCTIONS:
+	#   To test int_array.h, run: make output
+	#   To remove compiled output files, run: make clean
+
 # $ make
-out: $(SOURCES) $(HSOURCES)
-	gcc $(CFLAGS) $(SOURCES) -o out
-	# To execute the program, run: ./out
+output: $(SOURCES) $(HSOURCES)
+	gcc $(CFLAGS) $(SOURCES) -o output
+	# To execute the program, run: ./output
 
 # $ make clean
 # Removes created files
 clean:
-	rm -f out *.o
+	rm -f output *.o
