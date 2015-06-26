@@ -5,7 +5,7 @@ The current list of sorts is as follows:
 
 1. Bogosort
 2. Bubble sort
-3. Cocktail sort (in progress)
+3. Cocktail sort
 4. Insertion sort
 5. Quick sort
 6. Merge sort
