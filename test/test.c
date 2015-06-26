@@ -1,7 +1,7 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-06-14
+ * Date: 2015-06-25
  *
  * This C program tests the various sorting algorithms:
  *   bogosort,
@@ -21,6 +21,7 @@
 #include "test.h"
 #include "../bogosort/bogosort.h"
 #include "../bubble_sort/bubble_sort.h"
+#include "../cocktail_sort/cocktail_sort.h"
 #include "../insertion_sort/insertion_sort.h"
 #include "../merge_sort/merge_sort.h"
 #include "../quick_sort/quick_sort.h"
@@ -50,6 +51,7 @@ int main()
   int count = 1;
   printf( "Enter '%d' to test the bogosort.\n", count++ );
   printf( "Enter '%d' to test the bubble sort.\n", count++ );
+  printf( "Enter '%d' to test the cocktail sort.\n", count++ );
   printf( "Enter '%d' to test the insertion sort.\n", count++ );
   printf( "Enter '%d' to test the merge sort.\n", count++ );
   printf( "Enter '%d' to test the quick sort.\n", count++ );
@@ -69,23 +71,26 @@ int main()
       bubble_sort( array, len );
       break;
     case 3:
-      insertion_sort( array, len );
+      cocktail_sort( array, len );
       break;
     case 4:
-      merge_sort( array, len );
+      insertion_sort( array, len );
       break;
     case 5:
-      quick_sort( array, len );
+      merge_sort( array, len );
       break;
     case 6:
-      selection_sort( array, len );
+      quick_sort( array, len );
       break;
     case 7:
+      selection_sort( array, len );
+      break;
+    case 8:
       shell_sort( array, len );
       break;
     default:
-    printf( "That was not a valid input.\n" );
-    return 1;
+      printf( "That was not a valid input.\n" );
+      return 1;
   }
 
   printf( "Before sorting, the array is:\n" );

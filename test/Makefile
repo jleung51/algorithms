@@ -1,6 +1,7 @@
 # Source files
 SOURCES  = ../bogosort/bogosort.c \
            ../bubble_sort/bubble_sort.c \
+           ../cocktail_sort/cocktail_sort.c \
            ../insertion_sort/insertion_sort.c \
            ../merge_sort/merge_sort.c \
            ../quick_sort/quick_sort.c \
@@ -11,6 +12,7 @@ SOURCES  = ../bogosort/bogosort.c \
 # Header files
 HSOURCES = ../bogosort/bogosort.h \
            ../bubble_sort/bubble_sort.h \
+           ../cocktail_sort/cocktail_sort.h \
            ../insertion_sort/insertion_sort.h \
            ../merge_sort/merge_sort.h \
            ../quick_sort/quick_sort.h \
