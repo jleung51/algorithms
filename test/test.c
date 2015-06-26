@@ -3,14 +3,7 @@
  * Name: Jeffrey Leung
  * Date: 2015-06-25
  *
- * This C program tests the various sorting algorithms:
- *   bogosort,
- *   bubble sort,
- *   insertion sort,
- *   merge sort,
- *   quick sort,
- *   selection sort, and
- *   shell sort.
+ * This C program tests the various sorting algorithms listed in the README.
  *
  */
 

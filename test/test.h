@@ -1,17 +1,10 @@
 /*
  *
  * Name: Jeffrey Leung
- * Date: 2015-04-21
+ * Date: 2015-06-25
  *
  * This C program contains a function to assist testing of the various
- * sorting algorithms:
- *   bogosort,
- *   bubble sort,
- *   insertion sort,
- *   merge sort,
- *   quick sort,
- *   selection sort, and
- *   shell sort.
+ * sorting algorithms listed in the README.
  *
  */
 
