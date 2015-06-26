@@ -19,7 +19,7 @@
 // array + start + gap * 2,
 // etc.
 static void gap_insertion_sort( int* array, unsigned int len,
-                                unsigned int gap, unsigned int start );
+                                unsigned int gap );
 
 // Only for use by shell_sort().
 // This function sorts, using insertion sort, the elements at:
@@ -40,13 +40,6 @@ static void gap_insertion_sort( int* array, unsigned int len,
   {
     printf( "Implementation error: gap_insertion_sort() was given an invalid "\
             "gap length (%d where the length is %d).\n", gap, len );
-    exit( 2 );
-  }
-  else if( start >= gap )
-  {
-    printf( "Implementation error: gap_insertion_sort() was given a start "\
-            "value greater than the gap (start = %d, gap = %d).\n", \
-            start, gap );
     exit( 2 );
   }
 
