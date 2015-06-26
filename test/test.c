@@ -12,14 +12,14 @@
 #include <stdio.h>
 
 #include "test.h"
-#include "../bogosort/bogosort.h"
-#include "../bubble_sort/bubble_sort.h"
-#include "../cocktail_sort/cocktail_sort.h"
-#include "../insertion_sort/insertion_sort.h"
-#include "../merge_sort/merge_sort.h"
-#include "../quick_sort/quick_sort.h"
-#include "../selection_sort/selection_sort.h"
-#include "../shell_sort/shell_sort.h"
+#include "../sorts/bogosort/bogosort.h"
+#include "../sorts/bubble_sort/bubble_sort.h"
+#include "../sorts/cocktail_sort/cocktail_sort.h"
+#include "../sorts/insertion_sort/insertion_sort.h"
+#include "../sorts/merge_sort/merge_sort.h"
+#include "../sorts/quick_sort/quick_sort.h"
+#include "../sorts/selection_sort/selection_sort.h"
+#include "../sorts/shell_sort/shell_sort.h"
 
 // This function prints an integer array.
 void print_array( int* array, unsigned int len )

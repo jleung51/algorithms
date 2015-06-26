@@ -1,23 +1,23 @@
 # Source files
-SOURCES  = ../bogosort/bogosort.c \
-           ../bubble_sort/bubble_sort.c \
-           ../cocktail_sort/cocktail_sort.c \
-           ../insertion_sort/insertion_sort.c \
-           ../merge_sort/merge_sort.c \
-           ../quick_sort/quick_sort.c \
-           ../selection_sort/selection_sort.c \
-           ../shell_sort/shell_sort.c \
+SOURCES  = ../sorts/bogosort/bogosort.c \
+           ../sorts/bubble_sort/bubble_sort.c \
+           ../sorts/cocktail_sort/cocktail_sort.c \
+           ../sorts/insertion_sort/insertion_sort.c \
+           ../sorts/merge_sort/merge_sort.c \
+           ../sorts/quick_sort/quick_sort.c \
+           ../sorts/selection_sort/selection_sort.c \
+           ../sorts/shell_sort/shell_sort.c \
            test.c
 
 # Header files
-HSOURCES = ../bogosort/bogosort.h \
-           ../bubble_sort/bubble_sort.h \
-           ../cocktail_sort/cocktail_sort.h \
-           ../insertion_sort/insertion_sort.h \
-           ../merge_sort/merge_sort.h \
-           ../quick_sort/quick_sort.h \
-           ../selection_sort/selection_sort.h \
-           ../shell_sort/shell_sort.h \
+HSOURCES = ../sorts/bogosort/bogosort.h \
+           ../sorts/bubble_sort/bubble_sort.h \
+           ../sorts/cocktail_sort/cocktail_sort.h \
+           ../sorts/insertion_sort/insertion_sort.h \
+           ../sorts/merge_sort/merge_sort.h \
+           ../sorts/quick_sort/quick_sort.h \
+           ../sorts/selection_sort/selection_sort.h \
+           ../sorts/shell_sort/shell_sort.h \
            test.h
 
 
