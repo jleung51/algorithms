@@ -12,7 +12,7 @@ The current list of sorts is as follows:
 7. Selection sort
 8. Shell sort
 
-Todo:
-1. Improve testing implementation
-2. Implement comb sort
-3. Implement heapsort
+###Todo:
+1. Improve testing implementation  
+2. Implement comb sort  
+3. Implement heapsort  
