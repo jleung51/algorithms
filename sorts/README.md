@@ -16,3 +16,4 @@ The current list of sorts is as follows:
 1. Improve testing implementation  
 2. Implement comb sort  
 3. Implement heapsort  
+4. Implement radix sort
