@@ -1,7 +1,7 @@
 /*
  *
  * Author: Jeffrey Leung
- * Last edited: 2015-06-14
+ * Last edited: 2015-10-25
  *
  * This C program contains the implementation of a bubble sort algorithm on
  * an array of intgers.
@@ -12,12 +12,12 @@
 // bubble sort algorithm.
 void bubble_sort( int* array, unsigned int len )
 {
-  int sorted_check = 1;
-  while( sorted_check )
+  int sorted = 0;
+  while( !sorted )
   {
-    sorted_check = 0;
+    sorted = 1;
 
-    int i;
+    unsigned int i;
     for( i = 0; i < len-1; ++i )
     {
       if( array[i] > array[i+1] )
@@ -26,7 +26,7 @@ void bubble_sort( int* array, unsigned int len )
         array[i] = array[i+1];
         array[i+1] = temp;
 
-        sorted_check = 1;
+        sorted = 0;
       }
     }
   }
