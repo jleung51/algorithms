@@ -4,7 +4,7 @@
  * Last edited: 2015-10-17
  *
  * This C++ program contains the implementation of a recursive merge sort
- * algorithm on an array of integers.
+ * algorithm on a templated array.
  *
  * Originally written for the repository:
  *   https://github.com/jleung51/mini_programs/ - Permute
