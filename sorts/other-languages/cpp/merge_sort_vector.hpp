@@ -70,12 +70,12 @@ void MergeVectors( const typename std::vector<T>::iterator v1_start,
     if( *v1_index < *v2_index )
     {
       v_temp.insert( v_temp.end(), *v1_index );
-      std::advance( v1_index );
+      std::advance( v1_index, 1 );
     }
     else
     {
       v_temp.insert( v_temp.end(), *v2_index );
-      std::advance( v2_index );
+      std::advance( v2_index, 1 );
     }
   }
   
@@ -85,12 +85,12 @@ void MergeVectors( const typename std::vector<T>::iterator v1_start,
   while( v1_index < v1_end )
   {
     v_temp.insert( v_temp.end(), *v1_index );
-    std::advance( v1_index );
+    std::advance( v1_index, 1 );
   }
   while( v2_index < v2_end )
   {
     v_temp.insert( v_temp.end(), *v2_index );
-    std::advance( v2_index );
+    std::advance( v2_index, 1 );
   }
   
   // Moving sorted vector into v1 and v2:
