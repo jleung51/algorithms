@@ -1,7 +1,7 @@
 /*
  *
  * Author: Jeffrey Leung
- * Last edited: 2015-10-30
+ * Last edited: 2015-11-03
  *
  * This C++ program contains the implementation of a recursive merge sort
  * algorithm on a vector.
@@ -14,6 +14,7 @@
 #pragma once
 
 #include <iostream>
+#include <iterator>
 #include <stdexcept>
 #include <vector>
 
@@ -69,12 +70,12 @@ void MergeVectors( const typename std::vector<T>::iterator v1_start,
     if( *v1_index < *v2_index )
     {
       v_temp.insert( v_temp.end(), *v1_index );
-      ++v1_index;
+      std::advance( v1_index );
     }
     else
     {
       v_temp.insert( v_temp.end(), *v2_index );
-      ++v2_index;
+      std::advance( v2_index );
     }
   }
   
@@ -84,12 +85,12 @@ void MergeVectors( const typename std::vector<T>::iterator v1_start,
   while( v1_index < v1_end )
   {
     v_temp.insert( v_temp.end(), *v1_index );
-    ++v1_index;
+    std::advance( v1_index );
   }
   while( v2_index < v2_end )
   {
     v_temp.insert( v_temp.end(), *v2_index );
-    ++v2_index;
+    std::advance( v2_index );
   }
   
   // Moving sorted vector into v1 and v2:
