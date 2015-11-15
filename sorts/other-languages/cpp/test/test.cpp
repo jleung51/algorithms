@@ -3,8 +3,7 @@
  * Author: Jeffrey Leung
  * Last edited: 2015-11-14
  *
- * This C++ file tests the implementation of the merge sort function
- * in merge_sort.hpp.
+ * This C++ file tests the implementation of the C++ sort functions.
  *
  */
 
@@ -19,12 +18,12 @@
 namespace
 {
 
-// This local function prints the contents of a given iteratable data
+// This local function prints the contents of a given iterable data
 // structure in a horizontal list, surrounded by brackets [].
 template <class Iterator>
 void PrintHorizontal( const Iterator begin, const Iterator end );
 
-// This local function prints the contents of a given iteratable data
+// This local function prints the contents of a given iterable data
 // structure in a horizontal list, surrounded by brackets [].
 template <class Iterator>
 void PrintHorizontal( const Iterator begin, const Iterator end )
@@ -45,28 +44,49 @@ void PrintHorizontal( const Iterator begin, const Iterator end )
 int main()
 {
   srand(time(0));  // Seeding random number generator
+  std::vector<int> v1;
+  for( unsigned int i = 0; i < 10; ++i )
+  {
+    v1.push_back( rand() % 100 );
+  }
+  std::vector<int> v2( v1.begin(), v1.end() );
 
   std::cout << std::endl
-            << "TESTING MERGESORT():"
+            << "TESTING C++ SORTS:"
             << std::endl
             << "______________________________________________"
             << std::endl
             << std::endl;
 
-  std::vector<int> v;
-  for( unsigned int i = 0; i < 10; ++i )
+  int num;
+  bool invalid_input = true;
+  while( invalid_input )
   {
-    v.push_back( rand() % 100 );
+    unsigned int count = 1;
+    std::cout << "Enter " << count++ << " to test the merge sort.";
+    std::cout << std::endl;
+    std::cout << ">>> ";
+    std::cin >> num;
+    std::cout << std::endl;
+
+    switch( num )
+    {
+      case 1:
+        MergeSort<int>( v2.begin(), v2.end() );
+        invalid_input = false;
+        break;
+      default:
+        std::cout << "Error: That was not a valid input.";
+        std::cout << std::endl;
+    }
   }
 
   std::cout << "The contents of the vector before sorting are ";
-  PrintHorizontal( v.begin(), v.end() );
+  PrintHorizontal( v1.begin(), v1.end() );
   std::cout << std::endl;
 
-  MergeSort<int>( v.begin(), v.end() );
-
   std::cout << "The contents of the vector after sorting are  ";
-  PrintHorizontal( v.begin(), v.end() );
+  PrintHorizontal( v2.begin(), v2.end() );
   std::cout << std::endl;
 
   std::cout << std::endl;
