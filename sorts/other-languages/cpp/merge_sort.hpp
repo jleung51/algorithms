@@ -1,7 +1,7 @@
 /*
  *
  * Author: Jeffrey Leung
- * Last edited: 2015-11-14
+ * Last edited: 2015-11-15
  *
  * This C++ program contains the implementation of a recursive merge sort
  * algorithm on an iterable data structure.
@@ -18,6 +18,7 @@
 
 // This function recursively sorts an iterable data structure from least
 // to greatest using the merge sort algorithm.
+// Type T is the type of the object/value to be sorted.
 template <class T, class Iterator>
 void MergeSort( const Iterator begin, const Iterator end );
 
@@ -29,6 +30,7 @@ namespace
 // Only for use by MergeSort().
 // This local function merges two consecutive sorted data structures to create a
 // 'single' object with elements from least to greatest.
+// Type T is the type of the object/value to be sorted.
 // Iterator end_1 is equivalent to begin_2.
 template <class T, class Iterator>
 void Merge( const Iterator begin_1,
@@ -38,6 +40,7 @@ void Merge( const Iterator begin_1,
 // Only for use by MergeSort().
 // This local function merges two consecutive sorted data structures to create a
 // 'single' object with elements from least to greatest.
+// Type T is the type of the object/value to be sorted.
 // Iterator end_1 is equivalent to begin_2.
 template <class T, class Iterator>
 void Merge( const Iterator begin_1,
@@ -106,6 +109,7 @@ void Merge( const Iterator begin_1,
 
 // This function recursively sorts an iterable data structure from least
 // to greatest using the merge sort algorithm.
+// Type T is the type of the object/value to be sorted.
 template <class T, class Iterator>
 void MergeSort( const Iterator begin, const Iterator end )
 {
