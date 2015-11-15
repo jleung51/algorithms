@@ -28,7 +28,8 @@ void PrintHorizontal( const Iterator begin, const Iterator end );
 // This local function returns true if two given iterable data structures
 // contain equivalent values, and false otherwise.
 template <class Iterator>
-bool Equivalent( const Iterator begin, const Iterator end );
+bool Equivalent( const Iterator begin_1, const Iterator end_1,
+                 const Iterator begin_2, const Iterator end_2 );
 
 // This local function prints the contents of a given iterable data
 // structure in a horizontal list, surrounded by brackets [].
