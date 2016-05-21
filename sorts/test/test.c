@@ -1,8 +1,5 @@
 /*
  *
- * Name: Jeffrey Leung
- * Date: 2015-06-25
- *
  * This C program tests the various sorting algorithms listed in the README.
  *
  */
@@ -17,6 +14,7 @@
 #include "../sorts/cocktail_sort/cocktail_sort.h"
 #include "../sorts/insertion_sort/insertion_sort.h"
 #include "../sorts/merge_sort/merge_sort.h"
+#include "../sorts/pickupstick_sort/pickupstick_sort.h"
 #include "../sorts/quick_sort/quick_sort.h"
 #include "../sorts/selection_sort/selection_sort.h"
 #include "../sorts/shell_sort/shell_sort.h"
@@ -47,6 +45,7 @@ int main()
   printf( "Enter '%d' to test the cocktail sort.\n", count++ );
   printf( "Enter '%d' to test the insertion sort.\n", count++ );
   printf( "Enter '%d' to test the merge sort.\n", count++ );
+  printf( "Enter '%d' to test the pickup-stick sort.\n", count++ );
   printf( "Enter '%d' to test the quick sort.\n", count++ );
   printf( "Enter '%d' to test the selection sort.\n", count++ );
   printf( "Enter '%d' to test the shell sort.\n", count++ );
@@ -73,12 +72,15 @@ int main()
       merge_sort( array, len );
       break;
     case 6:
-      quick_sort( array, len );
+      pickupstick_sort( array, len );
       break;
     case 7:
-      selection_sort( array, len );
+      quick_sort( array, len );
       break;
     case 8:
+      selection_sort( array, len );
+      break;
+    case 9:
       shell_sort( array, len );
       break;
     default:
