@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 #include "pickupstick_sort.h"
 
@@ -32,5 +33,28 @@ static int is_sorted( int* array, unsigned int len )
 // pickupstick sort algorithm.
 void pickupstick_sort( int* array, unsigned int len )
 {
+  if( array == NULL )
+  {
+    printf( "Error: pickupstick_sort() was given a null pointer.\n" );
+    exit( 1 );
+  }
+
+  srand(time(NULL));
+  unsigned int element_1;
+  unsigned int element_2;
+
+  while( !is_sorted( array, len ) )
+  {
+    element_1 = rand() % len;
+    element_2 = rand() % len;
+
+    if( array[element_1] > array[element_2] )
+    {
+      int temp = array[element_1];
+      array[element_1] = array[element_2];
+      array[element_2] = temp;
+    }
+  }
+
   return;
 }
