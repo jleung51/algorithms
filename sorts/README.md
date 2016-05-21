@@ -5,13 +5,14 @@ Some sorts have been rewritten in other languages for alternate purposes; you ca
 The current list of sorts is as follows:
 
 1. Bogosort
-2. Bubble sort
-3. Cocktail sort
-4. Insertion sort
-5. Quick sort
-6. Merge sort
-7. Selection sort
-8. Shell sort
+1. Bubble sort
+1. Cocktail sort
+1. Insertion sort
+1. Merge sort
+1. Pickup-stick sort
+1. Quick sort
+1. Selection sort
+1. Shell sort
 
 ###Todo:
 1. Improve testing implementation, and add testing for the rewritten sorts.

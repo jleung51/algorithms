@@ -4,6 +4,7 @@ SOURCES  = ../sorts/bogosort/bogosort.c \
            ../sorts/cocktail_sort/cocktail_sort.c \
            ../sorts/insertion_sort/insertion_sort.c \
            ../sorts/merge_sort/merge_sort.c \
+           ../sorts/pickupstick_sort/pickupstick_sort.c \
            ../sorts/quick_sort/quick_sort.c \
            ../sorts/selection_sort/selection_sort.c \
            ../sorts/shell_sort/shell_sort.c \
@@ -15,6 +16,7 @@ HSOURCES = ../sorts/bogosort/bogosort.h \
            ../sorts/cocktail_sort/cocktail_sort.h \
            ../sorts/insertion_sort/insertion_sort.h \
            ../sorts/merge_sort/merge_sort.h \
+           ../sorts/pickupstick_sort/pickupstick_sort.h \
            ../sorts/quick_sort/quick_sort.h \
            ../sorts/selection_sort/selection_sort.h \
            ../sorts/shell_sort/shell_sort.h \
