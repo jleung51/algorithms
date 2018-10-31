@@ -21,5 +21,5 @@ insertion_sort list = insertion_sort_inner [] list
         insert :: (Ord a) => a -> [a] -> [a]
         insert el [] = [el]
         insert el l_insert
-          | el < head l_insert = [el] ++ l_insert
+          | el <= head l_insert = [el] ++ l_insert
           | otherwise          = [head l_insert] ++ insert el (tail l_insert)
