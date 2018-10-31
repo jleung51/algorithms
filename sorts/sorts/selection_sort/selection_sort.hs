@@ -1,4 +1,5 @@
--- This Haskell program contains the implementation of a selection sort algorithm.
+-- This Haskell program contains the implementation of a selection sort
+-- algorithm.
 
 -- This function sorts an array from least to greatest using the
 -- selection sort algorithm.
@@ -11,7 +12,9 @@ selection_sort list = selection_sort_inner [] list
     -- algorithm.
     selection_sort_inner :: (Ord a) => [a] -> [a] -> [a]
     selection_sort_inner accum [] = accum
-    selection_sort_inner accum l = selection_sort_inner (accum ++ [minimum l]) (remove (minimum l) l)
+    selection_sort_inner accum l = selection_sort_inner
+        (accum ++ [minimum l])
+        (remove (minimum l) l)
       where
         -- This function removes a single element from a list.
         -- If the list does not contain the element, the list is unchanged.
