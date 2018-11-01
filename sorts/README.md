@@ -13,6 +13,7 @@ The current list of sorts is as follows:
 1. Quick sort
 1. Selection sort
 1. Shell sort
+1. [Stalin sort](https://mastodon.social/@mathew/100958177234287431)
 
 ###Todo:
 1. Improve testing implementation, and add testing for the rewritten sorts.
